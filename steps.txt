@@ -1,0 +1,14 @@
+*backend*
+cd backend
+npm init -y
+npm install express mongoose dotenv cors bcrypt express-session passport passport-google-oauth20
+
+*frontend*
+
+npm install react-router-dom @mui/material @mui/icons-material axios
+npm install @emotion/react @emotion/styled
+
+
+*start program*
+backend->npm run dev
+frontend->npm start

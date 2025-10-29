@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from "axios";
+import axios from "../api";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(){
@@ -9,13 +9,13 @@ export default function Login(){
   	const [showPassword, setShowPassword] = useState(false); //  toggle  state
 
 	const handleGoogle = () => {
-		window.open("http://localhost:5000/auth/google", "_self");
+		window.open("https://kuri-backend.onrender.com/auth/google", "_self");
 	  };
 	
 	  const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("http://localhost:5000/auth/login", { email, password }, { withCredentials: true });
+			const res = await axios.post("/login", { email, password }, { withCredentials: true });
 			if (res.data) window.location.href = "/home";
 		} catch (err) {
 		  alert(err.response?.data?.message || "Error occurred");

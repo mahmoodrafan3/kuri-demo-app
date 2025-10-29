@@ -6,7 +6,7 @@ export default function Login(){
 	const navigate = useNavigate();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-  	const [showPassword, setShowPassword] = useState(false); //  toggle state
+  	const [showPassword, setShowPassword] = useState(false); //  toggle  state
 
 	const handleGoogle = () => {
 		window.open("http://localhost:5000/auth/google", "_self");

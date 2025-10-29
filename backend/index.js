@@ -10,7 +10,7 @@ import "./passport.js";
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://kuri-demo-app-git-main-mahmood-rafans-projects.vercel.app/", credentials: true }));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
